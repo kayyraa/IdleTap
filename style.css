@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(60, 60, 60);
+    font-family: "Montserrat";
+    color: white;
+}
+
+.Counter {
+    font-size: 32px;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.Coin {
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    transition: width 0.25s ease;
+
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    cursor: pointer;
+
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+}
