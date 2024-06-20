@@ -1,16 +1,23 @@
+@import url('font.css');
+
 body {
     background-color: rgb(60, 60, 60);
-    font-family: "Montserrat";
+    font-family: "OG";
     color: white;
+    overflow: hidden;
+    cursor: none;
 }
 
 .Counter {
-    font-size: 32px;
+    font-size: 64px;
     font-weight: 700;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 30%;
-    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    transition: font-size 0.5s ease;
 }
 
 .Coin {
@@ -23,9 +30,35 @@ body {
     top: 50%;
     left: 50%;
 
-    cursor: pointer;
-
     user-select: none !important;
     -moz-user-select: none !important;
     -webkit-user-select: none !important;
+}
+
+.Cursor {
+    position: fixed;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    transition: opacity 0.25s ease, width 0.125s ease;;
+}
+
+.App > div {
+    transition: opacity 0.25s ease;
+}
+
+.NavBar {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,0.5047268907563025) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.5047268907563025) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5047268907563025) 0%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
 }
